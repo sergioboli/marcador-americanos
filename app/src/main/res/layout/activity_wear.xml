@@ -45,65 +45,57 @@
         android:orientation="vertical"
         android:visibility="gone">
 
-        <!-- Barra superior para el Temporizador (rotado 90 grados) -->
-        <LinearLayout
+        <!-- Barra superior fija con el Temporizador grande y centrado -->
+        <FrameLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="#111111"
-            android:gravity="center"
-            android:paddingVertical="4dp">
+            android:padding="6dp">
 
             <TextView
                 android:id="@+id/tvTimer"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_gravity="center"
                 android:text="17:00"
                 android:textColor="#FFCA28"
-                android:textSize="20sp"
-                android:textStyle="bold"
-                android:rotation="90" />
-        </LinearLayout>
+                android:textSize="24sp"
+                android:textStyle="bold" />
+        </FrameLayout>
 
         <!-- Mitad Superior: Equipo A -->
-        <FrameLayout
+        <LinearLayout
             android:id="@+id/layoutTeamA"
             android:layout_width="match_parent"
             android:layout_height="0dp"
             android:layout_weight="1"
             android:background="#154CAF50"
+            android:gravity="center"
+            android:orientation="horizontal"
             android:clickable="true"
-            android:focusable="true">
+            android:focusable="true"
+            android:padding="8dp">
 
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:gravity="center"
-                android:orientation="horizontal"
-                android:paddingHorizontal="12dp">
+            <TextView
+                android:id="@+id/tvGamesA"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="J: 0"
+                android:textColor="#81C784"
+                android:textSize="22sp"
+                android:textStyle="bold"
+                android:layout_marginEnd="16dp" />
 
-                <TextView
-                    android:id="@+id/tvGamesA"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="J: 0"
-                    android:textColor="#81C784"
-                    android:textSize="20sp"
-                    android:textStyle="bold"
-                    android:rotation="90"
-                    android:layout_marginEnd="24dp" />
-
-                <TextView
-                    android:id="@+id/tvScoreA"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="0"
-                    android:textColor="#81C784"
-                    android:textSize="90sp"
-                    android:textStyle="bold"
-                    android:rotation="90"
-                    android:includeFontPadding="false" />
-            </LinearLayout>
-        </FrameLayout>
+            <TextView
+                android:id="@+id/tvScoreA"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0"
+                android:textColor="#81C784"
+                android:textSize="80sp"
+                android:textStyle="bold"
+                android:includeFontPadding="false" />
+        </LinearLayout>
 
         <!-- Línea divisoria -->
         <View
@@ -112,45 +104,38 @@
             android:background="#333333" />
 
         <!-- Mitad Inferior: Equipo B -->
-        <FrameLayout
+        <LinearLayout
             android:id="@+id/layoutTeamB"
             android:layout_width="match_parent"
             android:layout_height="0dp"
             android:layout_weight="1"
             android:background="#152196F3"
+            android:gravity="center"
+            android:orientation="horizontal"
             android:clickable="true"
-            android:focusable="true">
+            android:focusable="true"
+            android:padding="8dp">
 
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:gravity="center"
-                android:orientation="horizontal"
-                android:paddingHorizontal="12dp">
+            <TextView
+                android:id="@+id/tvGamesB"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="J: 0"
+                android:textColor="#64B5F6"
+                android:textSize="22sp"
+                android:textStyle="bold"
+                android:layout_marginEnd="16dp" />
 
-                <TextView
-                    android:id="@+id/tvGamesB"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="J: 0"
-                    android:textColor="#64B5F6"
-                    android:textSize="20sp"
-                    android:textStyle="bold"
-                    android:rotation="90"
-                    android:layout_marginEnd="24dp" />
-
-                <TextView
-                    android:id="@+id/tvScoreB"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="0"
-                    android:textColor="#64B5F6"
-                    android:textSize="90sp"
-                    android:textStyle="bold"
-                    android:rotation="90"
-                    android:includeFontPadding="false" />
-            </LinearLayout>
-        </FrameLayout>
+            <TextView
+                android:id="@+id/tvScoreB"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0"
+                android:textColor="#64B5F6"
+                android:textSize="80sp"
+                android:textStyle="bold"
+                android:includeFontPadding="false" />
+        </LinearLayout>
 
     </LinearLayout>
 
