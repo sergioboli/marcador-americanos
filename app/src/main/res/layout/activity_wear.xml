@@ -45,7 +45,7 @@
         android:orientation="vertical"
         android:visibility="gone">
 
-        <!-- Barra superior para el Temporizador -->
+        <!-- Barra superior para el Temporizador (rotado 90 grados) -->
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -60,7 +60,8 @@
                 android:text="17:00"
                 android:textColor="#FFCA28"
                 android:textSize="20sp"
-                android:textStyle="bold" />
+                android:textStyle="bold"
+                android:rotation="90" />
         </LinearLayout>
 
         <!-- Mitad Superior: Equipo A -->
@@ -88,6 +89,7 @@
                     android:textColor="#81C784"
                     android:textSize="20sp"
                     android:textStyle="bold"
+                    android:rotation="90"
                     android:layout_marginEnd="24dp" />
 
                 <TextView
@@ -98,6 +100,7 @@
                     android:textColor="#81C784"
                     android:textSize="90sp"
                     android:textStyle="bold"
+                    android:rotation="90"
                     android:includeFontPadding="false" />
             </LinearLayout>
         </FrameLayout>
@@ -133,6 +136,7 @@
                     android:textColor="#64B5F6"
                     android:textSize="20sp"
                     android:textStyle="bold"
+                    android:rotation="90"
                     android:layout_marginEnd="24dp" />
 
                 <TextView
@@ -143,6 +147,7 @@
                     android:textColor="#64B5F6"
                     android:textSize="90sp"
                     android:textStyle="bold"
+                    android:rotation="90"
                     android:includeFontPadding="false" />
             </LinearLayout>
         </FrameLayout>
