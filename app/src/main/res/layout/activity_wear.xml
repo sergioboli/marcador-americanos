@@ -61,33 +61,16 @@
                 android:gravity="center"
                 android:orientation="horizontal">
 
-                <LinearLayout
+                <TextView
+                    android:id="@+id/tvGamesA"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:gravity="center"
-                    android:orientation="vertical"
-                    android:layout_marginEnd="16dp">
-
-                    <TextView
-                        android:id="@+id/tvTimer"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="17:00"
-                        android:textColor="#FFCA28"
-                        android:textSize="22sp"
-                        android:textStyle="bold"
-                        android:rotation="90" />
-
-                    <TextView
-                        android:id="@+id/tvGamesA"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="J: 0"
-                        android:textColor="#81C784"
-                        android:textSize="16sp"
-                        android:textStyle="bold"
-                        android:rotation="90" />
-                </LinearLayout>
+                    android:text="J: 0"
+                    android:textColor="#81C784"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    android:rotation="90"
+                    android:layout_marginEnd="16dp" />
 
                 <TextView
                     android:id="@+id/tvScoreA"
@@ -129,7 +112,7 @@
                     android:layout_height="wrap_content"
                     android:text="J: 0"
                     android:textColor="#64B5F6"
-                    android:textSize="16sp"
+                    android:textSize="18sp"
                     android:textStyle="bold"
                     android:rotation="90"
                     android:layout_marginEnd="16dp" />
@@ -146,5 +129,20 @@
             </LinearLayout>
         </FrameLayout>
     </LinearLayout>
+
+    <!-- Temporizador centrado arriba, flotando sobre la línea divisoria -->
+    <TextView
+        android:id="@+id/tvTimer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal|center_vertical"
+        android:text="17:00"
+        android:textColor="#FFCA28"
+        android:textSize="28sp"
+        android:textStyle="bold"
+        android:background="#99050505"
+        android:paddingHorizontal="6dp"
+        android:paddingVertical="2dp"
+        android:visibility="gone" />
 
 </FrameLayout>
