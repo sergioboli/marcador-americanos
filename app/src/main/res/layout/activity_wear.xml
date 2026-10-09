@@ -36,7 +36,7 @@
             android:textStyle="bold" />
     </LinearLayout>
 
-    <!-- Contenido principal con división horizontal (arriba y abajo) -->
+    <!-- Contenido principal con división horizontal -->
     <LinearLayout
         android:id="@+id/layoutWearMainContent"
         android:layout_width="match_parent"
@@ -94,7 +94,8 @@
                     android:text="0"
                     android:textColor="#81C784"
                     android:textSize="110sp"
-                    android:textStyle="bold" />
+                    android:textStyle="bold"
+                    android:rotation="90" />
             </LinearLayout>
         </FrameLayout>
 
@@ -137,7 +138,8 @@
                     android:text="0"
                     android:textColor="#64B5F6"
                     android:textSize="110sp"
-                    android:textStyle="bold" />
+                    android:textStyle="bold"
+                    android:rotation="90" />
             </LinearLayout>
         </FrameLayout>
     </LinearLayout>
