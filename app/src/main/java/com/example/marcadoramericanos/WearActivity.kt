@@ -58,7 +58,6 @@ class WearActivity : AppCompatActivity() {
         isMatchRunning = true
         updateUI()
 
-        // Temporizador de 17 minutos (17 * 60 * 1000 ms)
         timer?.cancel()
         timer = object : CountDownTimer(17 * 60 * 1000L, 1000L) {
             override fun onTick(millisUntilFinished: Long) {
@@ -93,7 +92,6 @@ class WearActivity : AppCompatActivity() {
     }
 
     private fun checkGameWinner() {
-        // Con Punto de Oro: el primero que llegue a 4 puntos gana el juego
         if (scoreA >= 4) {
             winGame(true)
         } else if (scoreB >= 4) {

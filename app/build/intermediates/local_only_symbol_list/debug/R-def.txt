@@ -1,0 +1,17 @@
+R_DEF: Internal format may change without notice
+local
+drawable ic_launcher_background
+drawable ic_pala_americana
+id btnStart
+id layoutStart
+id layoutTeamA
+id layoutTeamB
+id layoutWearMainContent
+id tvGamesA
+id tvGamesB
+id tvScoreA
+id tvScoreB
+id tvTimer
+layout activity_wear
+mipmap ic_launcher
+mipmap ic_launcher_round

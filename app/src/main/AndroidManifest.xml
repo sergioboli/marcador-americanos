@@ -10,12 +10,13 @@
         android:icon="@mipmap/ic_launcher"
         android:label="Americano Padel"
         android:supportsRtl="true"
-        android:theme="@android:style/Theme.DeviceDefault">
+        android:theme="@style/Theme.AppCompat.NoActionBar">
         
         <activity
             android:name=".WearActivity"
             android:exported="true"
-            android:keepScreenOn="true">
+            android:keepScreenOn="true"
+            android:theme="@style/Theme.AppCompat.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
