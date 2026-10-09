@@ -53,12 +53,24 @@ class WearActivity : AppCompatActivity(), DataClient.OnDataChangedListener {
             layoutMainContent.visibility = View.VISIBLE
         }
 
+        // Clic normal para sumar
         layoutTeamA.setOnClickListener {
             addPointTeamA()
         }
 
         layoutTeamB.setOnClickListener {
             addPointTeamB()
+        }
+
+        // Pulsación larga para restar
+        layoutTeamA.setOnLongClickListener {
+            subPointTeamA()
+            true
+        }
+
+        layoutTeamB.setOnLongClickListener {
+            subPointTeamB()
+            true
         }
 
         updateUI()
@@ -86,6 +98,17 @@ class WearActivity : AppCompatActivity(), DataClient.OnDataChangedListener {
         updateUI()
     }
 
+    private fun subPointTeamA() {
+        if (scoreA >= 15) {
+            scoreA -= 15
+        } else if (scoreA == 0 && gamesA > 0) {
+            gamesA--
+            scoreA = 30
+        }
+        syncData()
+        updateUI()
+    }
+
     private fun addPointTeamB() {
         scoreB += 15
         if (scoreB == 45) scoreB = 40
@@ -93,6 +116,17 @@ class WearActivity : AppCompatActivity(), DataClient.OnDataChangedListener {
             scoreA = 0
             scoreB = 0
             gamesB++
+        }
+        syncData()
+        updateUI()
+    }
+
+    private fun subPointTeamB() {
+        if (scoreB >= 15) {
+            scoreB -= 15
+        } else if (scoreB == 0 && gamesB > 0) {
+            gamesB--
+            scoreB = 30
         }
         syncData()
         updateUI()
