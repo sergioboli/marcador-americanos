@@ -3,6 +3,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#050505"
+    android:clipChildren="false"
+    android:clipToPadding="false"
     android:keepScreenOn="true">
 
     <!-- Pantalla de inicio con el botón de Empezar -->
@@ -42,7 +44,8 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical"
-        android:visibility="gone">
+        android:visibility="gone"
+        android:clipChildren="false">
 
         <!-- Equipo A (Mitad Superior) -->
         <FrameLayout
@@ -52,14 +55,16 @@
             android:layout_weight="1"
             android:background="#154CAF50"
             android:clickable="true"
-            android:focusable="true">
+            android:focusable="true"
+            android:clipChildren="false">
 
             <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:gravity="center"
-                android:orientation="horizontal">
+                android:orientation="horizontal"
+                android:clipChildren="false">
 
                 <TextView
                     android:id="@+id/tvGamesA"
@@ -78,9 +83,10 @@
                     android:layout_height="wrap_content"
                     android:text="0"
                     android:textColor="#81C784"
-                    android:textSize="110sp"
+                    android:textSize="100sp"
                     android:textStyle="bold"
-                    android:rotation="90" />
+                    android:rotation="90"
+                    android:includeFontPadding="false" />
             </LinearLayout>
         </FrameLayout>
 
@@ -97,14 +103,16 @@
             android:layout_weight="1"
             android:background="#152196F3"
             android:clickable="true"
-            android:focusable="true">
+            android:focusable="true"
+            android:clipChildren="false">
 
             <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:gravity="center"
-                android:orientation="horizontal">
+                android:orientation="horizontal"
+                android:clipChildren="false">
 
                 <TextView
                     android:id="@+id/tvGamesB"
@@ -123,26 +131,25 @@
                     android:layout_height="wrap_content"
                     android:text="0"
                     android:textColor="#64B5F6"
-                    android:textSize="110sp"
+                    android:textSize="100sp"
                     android:textStyle="bold"
-                    android:rotation="90" />
+                    android:rotation="90"
+                    android:includeFontPadding="false" />
             </LinearLayout>
         </FrameLayout>
     </LinearLayout>
 
-    <!-- Temporizador centrado arriba, flotando sobre la línea divisoria -->
+    <!-- Temporizador situado abajo al centro para no cortar nada -->
     <TextView
         android:id="@+id/tvTimer"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_gravity="center_horizontal|center_vertical"
+        android:layout_gravity="bottom|center_horizontal"
+        android:layout_marginBottom="4dp"
         android:text="17:00"
         android:textColor="#FFCA28"
-        android:textSize="28sp"
+        android:textSize="16sp"
         android:textStyle="bold"
-        android:background="#99050505"
-        android:paddingHorizontal="6dp"
-        android:paddingVertical="2dp"
         android:visibility="gone" />
 
 </FrameLayout>
