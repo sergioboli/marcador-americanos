@@ -75,7 +75,8 @@
                         android:text="17:00"
                         android:textColor="#FFCA28"
                         android:textSize="22sp"
-                        android:textStyle="bold" />
+                        android:textStyle="bold"
+                        android:rotation="90" />
 
                     <TextView
                         android:id="@+id/tvGamesA"
@@ -84,7 +85,8 @@
                         android:text="J: 0"
                         android:textColor="#81C784"
                         android:textSize="16sp"
-                        android:textStyle="bold" />
+                        android:textStyle="bold"
+                        android:rotation="90" />
                 </LinearLayout>
 
                 <TextView
@@ -129,6 +131,7 @@
                     android:textColor="#64B5F6"
                     android:textSize="16sp"
                     android:textStyle="bold"
+                    android:rotation="90"
                     android:layout_marginEnd="16dp" />
 
                 <TextView
